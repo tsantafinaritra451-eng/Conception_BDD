@@ -10,6 +10,8 @@ CREATE Table commande_plat(
     quantite INTEGER NOT NULL
 );
 
+alter table commande add COLUMN id_client INTEGER REFERENCES client(id_client) on delete CASCADE;
+
 insert into commande(date) values('2024-06-01');
 insert into commande(date) values('2024-07-01');
 
@@ -17,3 +19,5 @@ insert into commande_plat(id_commande, id_plat, quantite) values(1, 1, 2);
 insert into commande_plat(id_commande, id_plat, quantite) values(1, 2, 1);
 insert into commande_plat(id_commande, id_plat, quantite) values(1, 3, 1);
 
+
+insert into commande (date, id_client) values('2024-08-01', 2);

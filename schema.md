@@ -9,3 +9,6 @@ modifier: plats (**id_plat**, nom, prix, #id_categorie)
 commande (**id_commande**, date)
 commande_plat(**id**, #id_plat, #id_commande)
 
+# etape 4
+client (**id_client**, nom)
+modifier: commande (**id_commande**, date, #id_client)

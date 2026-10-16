@@ -27,5 +27,24 @@ JOIN plats as p
 ON c.id_plat = p.id_plat 
 GROUP BY c.id_commande;
 
--- Question : quantite est placer dans commande_plat parce que c'est la quantite de chaque plat dans une commande, donc c'est logique de le mettre dans cette table qui relie les commandes et les plats.
+-- Question piege: quantite est placer dans commande_plat parce que c'est la quantite de chaque plat dans une commande, donc c'est logique de le mettre dans cette table qui relie les commandes et les plats.
 
+Etape 4 
+Liste les commandes avec nom du client en affichant « client de passage »
+
+SELECT c.id_commande, cl.nom as nom_client from commande_plat as c 
+JOIN commande as com
+ON  c.id_commande = com.id_commande 
+JOIN plats as p
+ON c.id_plat = p.id_plat 
+
+select 
+CASE 
+WHEN cm.id_client IS NULL THEN 'client de passage'
+ELSE cl.nom
+END as nom_client, cm.date from commande as cm
+left join client as cl 
+on cm.id_client = cl.id_client;
+
+-- question piege : non c'est pas not null le client car seul les clients habituelle sont not null 
+-- jointure pour ne rien perdre: left join
