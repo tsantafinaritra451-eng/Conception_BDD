@@ -12,3 +12,8 @@ commande_plat(**id**, #id_plat, #id_commande)
 # etape 4
 client (**id_client**, nom)
 modifier: commande (**id_commande**, date, #id_client)
+
+# etape 5
+serveur(**id_serveur**, nom)
+tables (**id_tables**, numero)
+

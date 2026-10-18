@@ -3,6 +3,9 @@ CREATE Table commande (
     date DATE NOT NULL
 );
 
+alter table commande add COLUMN id_serveur INTEGER REFERENCES serveur(id_serveur) on delete CASCADE;
+
+
 CREATE Table commande_plat(
     id SERIAL PRIMARY KEY,
     id_commande INTEGER REFERENCES commande(id_commande) NOT NULL,
