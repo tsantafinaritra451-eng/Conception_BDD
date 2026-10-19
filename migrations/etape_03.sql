@@ -19,6 +19,9 @@ insert into commande(date) values('2024-06-01');
 insert into commande(date) values('2024-07-01');
 
 insert into commande_plat(id_commande, id_plat, quantite) values(1, 1, 2);
+insert into commande_plat(id_commande, id_plat, quantite) values(1, 1, 2);
+insert into commande_plat(id_commande, id_plat, quantite) values(1, 1, 2);
+
 insert into commande_plat(id_commande, id_plat, quantite) values(1, 2, 1);
 insert into commande_plat(id_commande, id_plat, quantite) values(1, 3, 1);
 

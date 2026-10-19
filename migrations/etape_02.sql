@@ -26,6 +26,7 @@ ALTER Table plats alter COLUMN id_categorie SET NOT NULL;
 
 INSERT INTO categorie_plat(libelle) VALUES('glace');
 
+UPDATE plats SET prix = 7500 WHERE id_plat=1;
 
 
 
