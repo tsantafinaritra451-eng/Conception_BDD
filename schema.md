@@ -17,3 +17,10 @@ modifier: commande (**id_commande**, date, #id_client)
 serveur(**id_serveur**, nom)
 tables (**id_tables**, numero)
 
+# etape 6
+mobile_money(**id_mobile_money**, libelle)
+type_paiement(**id_type_paiement**, libelle)
+paiement(**id_paiement_fille**,#id_paiement, #id_type_paiement, #id_mobile_money, montant, reference_transaction)
+
+
+
